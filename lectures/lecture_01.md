@@ -30,3 +30,31 @@ Model - 자스의 데이터가 변했을 때 데이터 바인딩을 통해 View�
         div.innerHTML = newValue; // 데이터 바인딩
       }
     })
+
+
+
+
+
+#### 위 코드를 라이브러리화 하기
+
+    (function() {
+        function init() {
+            Object.defineProperty(viewModel, 'str', {
+              // 속성에 접근했을 때의 동작을 정의
+              get: function() {
+                console.log('접근');
+              },
+              set: function(newValue) {
+                console.log('할당', newValue);
+                div.innerHTML = newValue; // 데이터 바인딩
+              }
+        }
+        
+        function render(value) {
+            div.innerHTML = value;
+        }
+        
+        init();
+    })();
+    
+이런식으로 라이브러리들은 즉시 실행함수에 코드를 넣어 유효 범위 안에 가둬둠
