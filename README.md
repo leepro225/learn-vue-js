@@ -5,5 +5,5 @@ toy-project
 
 | #   | 날짜                                                                              | 카테고리     | 기록                                                    | 비고 |
 | :-- | :-------------------------------------------------------------------------------- | :----------- | :------------------------------------------------------ | :--- |
-| 1 | 20200107 | 강의준비 | [강의 소개](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_01.md) | |
+| 1 | 20200107 | 뷰소개 | [뷰란 무엇인가?](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_01.md) | |
 
