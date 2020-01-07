@@ -8,6 +8,25 @@ ViewModel의 DOM Listeners가 청취하다가 이벤트를 받아 자바스크�
 
 Model - 자스의 데이터가 변했을 때 데이터 바인딩을 통해 View에 반영한다.
 
+
+
+
 #### 일반적인 자스 개발
 리액트, 뷰 등을 사용하지 않고 개발한다면, 돔 타겟을 잡고 innerHtml을 이용해 데이터를 바꿈.  
-사용자 인터렉션이 일어나 나중에 데이터가 변경된다면 다시 한번 innerHtml을 이용해 데이터를 바꿈
+사용자 인터렉션이 일어나 나중에 데이터가 변경된다면 다시 한번 innerHtml을 이용해 데이터를 바꿈. 두번 일함. 중복 코드.
+
+
+
+
+#### 뷰의 핵심 reactivity를 자스로 구현
+
+    Object.defineProperty(viewModel, 'str', {
+      // 속성에 접근했을 때의 동작을 정의
+      get: function() {
+        console.log('접근');
+      },
+      set: function(newValue) {
+        console.log('할당', newValue);
+        div.innerHTML = newValue; // 데이터 바인딩
+      }
+    })
