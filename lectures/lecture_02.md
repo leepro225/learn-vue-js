@@ -12,11 +12,12 @@
 vue안의 내장 객체들을 사용하기 위해 인스턴스를 생성한다.
 
     const vm = new Vue({
-      el : '#app',
+      el : '#app', // app 안에서 뷰를 사용하겠다는 뜻
       data : {
         message : 'hi'
       }
     });
  
 생성한 뷰 인스턴스 안은 객체!
+
 
