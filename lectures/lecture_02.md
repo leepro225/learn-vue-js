@@ -1,6 +1,6 @@
 # 인스턴스 개념 
 
-#### 인스턴스 new Vue()
+### 인스턴스 new Vue()
     function Vue() {
       this.logText = function() {
         console.log('hello');
@@ -28,7 +28,7 @@ vue안의 내장 객체들을 사용하기 위해 인스턴스를 생성한다.
 
 
 
-#### 인스턴스 속성
+### 인스턴스 속성
 
     new Vue({
         el : ,
