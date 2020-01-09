@@ -1,18 +1,10 @@
-# 뷰에서의this
+# 같은 레벨의 컴포넌트간의 데이터 통신 방법
 
-### object안에서의this는 object를 가리킨다.
+### 부모로 보내고 다시 받고, 중간에 data를 통해서
 
-    const obj = {
-        hi : 'hello',
-        greeting : function() {
-            console.log(this.hi);
-        }
-    }
+![06](./img/06.JPG)
 
-마찬가지로 vue 인스턴스도 객체니까 this는 vue를 가리킨다.   
-  
-참고 : https://www.w3schools.com/js/js_this.asp
-https://medium.com/better-programming/understanding-the-this-keyword-in-javascript-cb76d4c7c5e8
+   
 
 
 
