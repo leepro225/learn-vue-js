@@ -1,47 +1,20 @@
-# event emit 개념
+# 뷰에서의this
 
-### event emit (자식이 부모에게 이벤트 방출하고 부모가 받기)
+### object안에서의this는 object를 가리킨다.
 
-    <div id="app">
-        // <app-header v-on:하위컴포넌트에서 발생한 이벤트 이름="상위 컴포넌트의 메서드"></app-header>
-           <app-header v-on:pass="logText"></app-header>
-    </div>
-    <script>
-        const appHeader = {
-                     // <button v-on:click="메서드명">header</button>'
-            template : '<button v-on:click="passEvent">header</button>',
-            methods : {
-                passEvent : function() {
-                    this.$emit('pass');
-                }
-            }
+    const obj = {
+        hi : 'hello',
+        greeting : function() {
+            console.log(this.hi);
         }
+    }
 
-        new Vue({
-            el : '#app',
-            components : {
-                'app-header' : 'appHeader'
-            },
-            methods : {
-                logText : function() {
-                    console.log('say hi'); // 하위 버튼 클릭시 상위 이벤트 발생
-                }
-            }
-        });
-    </script>
-    
- emit은 자식이 부모로 데이터를 보낼때 사용  
- 버튼을 클릭하면 passEvent라는 메서드를 실행, 안을 들어가보니 pass라는 메서드를 실행하라고 함.  
+마찬가지로 vue 인스턴스도 객체니까 this는 vue를 가리킨다.   
+  
+참고 : https://www.w3schools.com/js/js_this.asp
+https://medium.com/better-programming/understanding-the-this-keyword-in-javascript-cb76d4c7c5e8
 
 
-
-
-### event logging
-
-![04](./img/04.JPG)
-
-이벤트 이력(logging)을 확인할 수 있는 탭  
-<app-header>컴포넌트로부터 pass라는 이벤트가 발생했다는 뜻
 
 
 
