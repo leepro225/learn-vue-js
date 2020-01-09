@@ -12,3 +12,4 @@ toy-project
 | 5 | 20200109 | 컴포넌트 통신방법-기본 | [props 개념](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_05.md) | |
 | 6 | 20200109 | 컴포넌트 통신방법-기본 | [evnet emit 개념](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_06.md) | |
 | 7 | 20200109 | 컴포넌트 통신방법-기본 | [뷰에서의 this](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_07.md) | |
+| 8 | 20200109 | 컴포넌트 통신방법-응용 | [같은 컴포넌트 레벨간의 통신 방법](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_08.md) | |
