@@ -1,14 +1,20 @@
 # event emit 개념
 
-### event emit
+### event emit (자식이 부모에게 이벤트 방출하고 부모가 받기)
 
     <div id="app">
-        // <app-header v-on:click="메서드명"></app-header>
-           <app-header v-on:click="passEvent"></app-header>
+        // <app-header v-on:하위컴포넌트에서 발생한 이벤트 이름="상위 컴포넌트의 메서드"></app-header>
+           <app-header v-on:pass="logText"></app-header>
     </div>
     <script>
         const appHeader = {
-            template : '<button>header</button>'
+                     // <button v-on:click="메서드명">header</button>'
+            template : '<button v-on:click="passEvent">header</button>',
+            methods : {
+                passEvent : function() {
+                    this.$emit('pass');
+                }
+            }
         }
 
         new Vue({
@@ -16,12 +22,9 @@
             components : {
                 'app-header' : 'appHeader'
             },
-            data : {
-                message : 'hi'
-            },
             methods : {
-                passEvent : function() {
-                    this.$emit('pass');
+                logText : function() {
+                    console.log('say hi'); // 하위 버튼 클릭시 상위 이벤트 발생
                 }
             }
         });
@@ -39,7 +42,6 @@
 
 이벤트 이력(logging)을 확인할 수 있는 탭  
 <app-header>컴포넌트로부터 pass라는 이벤트가 발생했다는 뜻
-
 
 
 
