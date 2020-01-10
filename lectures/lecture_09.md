@@ -1,49 +1,12 @@
-# 같은 레벨의 컴포넌트간의 데이터 통신 방법
+# 뷰 라우터
 
-### 부모로 보내고 다시 받고, 중간에 data를 통해서
+####  뷰 라우터 소개와 설치
 
-![06](./img/05.JPG)
+싱글 페이지 어플리케이션을 구현을 위한 뷰 라이브러리
 
+### NPM 방식 설치
 
-   <div id="app">
-       <app-header v-bind:propsdata="num"></app-header>
-       <app-content v-on:pass="deliverNum"></app-content>
-     </div>
-
-     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-     <script>
-       var appHeader = {
-         template: '<div>header</div>',
-         props: ['propsdata']
-       }
-       var appContent = {
-         template: '<div>content<button v-on:click="passNum">pass</button></div>',
-         methods: {
-           passNum: function() {
-             this.$emit('pass', 10);
-           }
-         }
-       }
-       new Vue({
-         el: '#app',
-         components: {
-           'app-header': appHeader,
-           'app-content': appContent
-         },
-         data: {
-           num: 0
-         },
-         methods: {
-           deliverNum: function(value) {
-             this.num = value;
-           }
-         }
-       })
-     </script>
-
-   
-
-
-
+    npm install vue-router
+    
 
 
