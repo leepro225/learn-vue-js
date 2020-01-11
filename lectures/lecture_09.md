@@ -12,10 +12,13 @@
 ### 라우터 연결하기
 
     <div id="app"></div>
-    
+        <router-view></router-view> // new Vue 에서 app에 router를 등록했기때문에 사용가능한 컴포넌트, 이 안에 path에 따라 컴포넌트가 표현된다
     <script>
         const LoginComponent = {
             template : '<div>login</div>
+        }
+        const MainComponent = {
+            template : '<div>main</div>
         }
         
         const Router : new VueRouter({
@@ -23,11 +26,14 @@
             routes : [
                 {
                     // 페이지의 url 주소
-                    path : '/logign',
+                    path : '/login',
                     // 해당 url에서 표시될 컴포넌트
                     component : LoginComponent 
                 },
-                {}                                                                                                                                                                                                                     
+                {
+                    path : '/main',
+                    component : MainComponent
+                }                                                       
             ]
         });
         
