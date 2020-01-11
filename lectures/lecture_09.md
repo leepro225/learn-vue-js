@@ -28,6 +28,8 @@
         }
         
         const Router = new VueRouter({
+            // url에 #없애는 설정값
+            mode : 'history', 
             // 페이지의 라우팅 정보(어디로 이동할지에 대한 정보)
             routes : [
                 {
