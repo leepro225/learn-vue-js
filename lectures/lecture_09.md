@@ -55,4 +55,8 @@ router는 methods처럼 기본 내장된 예약어임. 라우터를 인스턴스
 
 
 
+네비게이션 가드 : https://joshua1988.github.io/web-development/vuejs/vue-router-navigation-guards/
+
+
+
 
