@@ -1,62 +1,30 @@
-# 뷰 라우터
+# HTTP 라이브러리와 Ajax 그리고 Vue Resource
 
-####  뷰 라우터 소개와 설치
+####  액시오스 axios
 
-싱글 페이지 어플리케이션을 구현을 위한 뷰 라이브러리
-
-### NPM 방식 설치
-
-    npm install vue-router
-    
-
-### 라우터 연결하기
-
-    <div id="app">
-    <div>
-        <router-link to="/login"></router-link>
-        <router-link to="/main"></router-link>
-    </div>
-    <router-view></router-view> // new Vue 에서 app에 router를 등록했기때문에 사용가능한 컴포넌트, 이 안에 path에 따라 컴포넌트가 표현된다
-    </div>
-       
-    <script>
-        const LoginComponent = {
-            template : '<div>login</div>
-        }
-        const MainComponent = {
-            template : '<div>main</div>
-        }
-        
-        const Router = new VueRouter({
-            // url에 #없애는 설정값
-            mode : 'history', 
-            // 페이지의 라우팅 정보(어디로 이동할지에 대한 정보)
-            routes : [
-                {
-                    // 페이지의 url 주소
-                    path : '/login',
-                    // 해당 url에서 표시될 컴포넌트
-                    component : LoginComponent 
-                },
-                {
-                    path : '/main',
-                    component : MainComponent
-                }                                                       
-            ]
-        });
-        
-        new Vue({
-            el : '#app',
-            router : Router
-        });
-    </script>
-    
-router는 methods처럼 기본 내장된 예약어임. 라우터를 인스턴스화 하고  app태그와 연결함.
-
-
-
-네비게이션 가드 : https://joshua1988.github.io/web-development/vuejs/vue-router-navigation-guards/
+ 뷰에서 권고하는 promise 기반의 HTTP 통신 라이브러리. 
 
 
 
 
+
+
+#### 에이젝스 ajax
+
+화면에 변화가 생겼을때 서버에 html 파일 전체를 요청하는 것이 아니라 필요한 부분만 요청을 날려 변화된 일부만 데이터를 바꿀 수 있도록 하는 웹 개발 기법
+
+
+
+
+
+#### 자바스크립트의 비동기 처리 패턴 진화 과정
+1. callback
+2. promise
+3. promise + generator
+4. async & await
+
+참고  
+ajax github : https://github.com/axios/axios  
+자바스크립트 비동기 처리와 콜백 함수 : https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/  
+자바스크립트 Promise 쉽게 이해하기 : https://joshua1988.github.io/web-development/javascript/promise-for-beginners/  
+자바스크립트 async와 await : https://joshua1988.github.io/web-development/javascript/js-async-await/
