@@ -11,8 +11,14 @@
 
 ### 라우터 연결하기
 
-    <div id="app"></div>
-        <router-view></router-view> // new Vue 에서 app에 router를 등록했기때문에 사용가능한 컴포넌트, 이 안에 path에 따라 컴포넌트가 표현된다
+    <div id="app">
+    <div>
+        <router-link to="/login"></router-link>
+        <router-link to="/main"></router-link>
+    </div>
+    <router-view></router-view> // new Vue 에서 app에 router를 등록했기때문에 사용가능한 컴포넌트, 이 안에 path에 따라 컴포넌트가 표현된다
+    </div>
+       
     <script>
         const LoginComponent = {
             template : '<div>login</div>
@@ -21,7 +27,7 @@
             template : '<div>main</div>
         }
         
-        const Router : new VueRouter({
+        const Router = new VueRouter({
             // 페이지의 라우팅 정보(어디로 이동할지에 대한 정보)
             routes : [
                 {
@@ -43,5 +49,8 @@
         });
     </script>
     
-router는 methods처럼 기본 내장된 예약어임. 라우터를 인스턴스화 하고 연결함.
+router는 methods처럼 기본 내장된 예약어임. 라우터를 인스턴스화 하고  app태그와 연결함.
+
+
+
 
