@@ -35,38 +35,38 @@ ajax github : https://github.com/axios/axios
 
 #### 실습 코드
 
-  <div id="app">
-    <button v-on:click="getData">get user</button>
-    <div>
-      {{ users }}
+    <div id="app">
+      <button v-on:click="getData">get user</button>
+      <div>
+        {{ users }}
+      </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        users: []
-      },
-      methods: {
-        getData: function() { 
-          var vm = this;
-          console.log(this); // Vue instance를 가리킴
-          axios.get('https://jsonplaceholder.typicode.com/users/')
-            .then(function(response) {
-              console.log(this); // 어디를 가리킬까
-              console.log(response.data);
-              vm.users = response.data;
-            })
-            .catch(function(error) {
-              console.log(error);
-            });
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          users: []
+        },
+        methods: {
+          getData: function() { 
+            var vm = this;
+            console.log(this); // Vue instance를 가리킴
+            axios.get('https://jsonplaceholder.typicode.com/users/')
+              .then(function(response) {
+                console.log(this); // 어디를 가리킬까
+                console.log(response.data);
+                vm.users = response.data;
+              })
+              .catch(function(error) {
+                console.log(error);
+              });
+          }
         }
-      }
-    })
-  </script>
+      })
+    </script>
 
 
 json 데이터 테스트 : https://jsonplaceholder.typicode.com
