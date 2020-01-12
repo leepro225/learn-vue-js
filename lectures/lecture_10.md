@@ -70,3 +70,4 @@ ajax github : https://github.com/axios/axios
 
 
 json 데이터 테스트 : https://jsonplaceholder.typicode.com
+js 동작원리 : https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine/
