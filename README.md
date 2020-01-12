@@ -17,3 +17,4 @@ toy-project
 | 10 | 20200111 | 통신 | [http 통신 라이브러리 - axios](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_10.md) |*참고|
 | 11 | 20200112 | 문법 | [템플릿문법 기본 v-bind, v-if, v-show, keyup](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_11.md) | |
 | 12 | 20200112 | 문법 | [템플릿문법 실전 watch, computed](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_12.md) | |
+| 13 | 20200112 | 뷰 | [CLI](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_13.md) | |
