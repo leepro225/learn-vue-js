@@ -53,3 +53,72 @@
 
 
 computed속성은 data의 변화에 따라 변화하게 될 속성을 정의한다.
+
+
+
+
+### v-bind로 id와 class 바인딩하기
+
+     <div id="app">
+        <p v-bind:id="uuid" v-bind:class="name">{{ num }}</p>
+     </div>
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            num: 10,
+            uuid: 'abc1234',
+            name: 'text-blue'
+          }
+        })
+      </script>
+   
+  id와 class를 데이터에 따라 동적으로 바꾸고 싶을 때 v-bind를 사용한다.
+  
+  
+  
+  
+  ### v-if, 데이터에 따라 특정 태그를 보여주냐 마냐 할때
+  
+    <div id="app">
+        <div v-if="loading">
+          Loading...
+        </div>
+        <div v-else>
+          test user has been logged in
+        </div>
+    </div>
+    
+    <script>
+        new Vue({
+          el: '#app',
+          data: {
+            loading: true
+          }
+        })
+    </script>
+  
+ ※ dom에서 완전히 제거됨
+ 
+ 
+ 
+ 
+ ### v-show, 데이터에 따라 특정 태그를 보여주냐 마냐 할때
+  
+    <div id="app">
+        <div v-show="loading">
+          Loading...
+        </div>
+    </div>
+    
+    <script>
+        new Vue({
+          el: '#app',
+          data: {
+            loading: true
+          }
+        })
+    </script>
+  
+ ※ dom에서 style에 display:none이 추가됨 
+
