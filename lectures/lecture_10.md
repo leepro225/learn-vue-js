@@ -69,5 +69,13 @@ ajax github : https://github.com/axios/axios
     </script>
 
 
-json 데이터 테스트 : https://jsonplaceholder.typicode.com
+json 데이터 테스트 : https://jsonplaceholder.typicode.com  
 js 동작원리 : https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine/
+
+
+
+
+
+#### 웹 서비스에서의 클라이언트와 서버와의 HTTP 통신 구조
+
+![06](./img/06.JPG)
