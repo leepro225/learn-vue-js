@@ -32,24 +32,24 @@
     
 ### 데이터 바인딩과 computed 속성
 
- <div id="app">
-    <p>{{ num }}</p>
-    <p>{{ doubleNum }}</p>
- </div>
- 
- <script>
-    new Vue({
-      el: '#app',
-      data: {
-        num: 10,
-      },
-      computed: {
-        doubleNum: function() {
-          return this.num * 2;
-        }
-      }
-    })
-  </script>
+     <div id="app">
+        <p>{{ num }}</p>
+        <p>{{ doubleNum }}</p>
+     </div>
+
+     <script>
+        new Vue({
+          el: '#app',
+          data: {
+            num: 10,
+          },
+          computed: {
+            doubleNum: function() {
+              return this.num * 2;
+            }
+          }
+        })
+      </script>
 
 
 computed속성은 data의 변화에 따라 변화하게 될 속성을 정의한다.
