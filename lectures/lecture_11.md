@@ -121,4 +121,60 @@ computed속성은 data의 변화에 따라 변화하게 될 속성을 정의한�
     </script>
   
  ※ dom에서 style에 display:none이 추가됨 
+ 
+ 
+ 
+ 
+ 
+ ### 모르는 문법이 나왔을 때 공식 문서를 보고 해결하는 방법
+ 
+ www.vuejs.org 에서 검색, 예제를 보고 따라하기
+ 
+ 
+ 
+ 
+ ### methods 속성과 click 이벤트
+ 
+  <div id="app">
+    <button v-on:click="logText">click me</button>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        logText: function() {
+          console.log('clicked');
+        }
+      }
+    })
+  </script>
+  
+  
+  
+  
+  ### methods 속성과 v-on 디렉티브를 이용한 키보드, 마우스 이벤트 처리 방법
+  
+  <div id="app">
+    <input type="text" v-on:keyup="logText"> // 사용자가 키보드를 누를때마다
+    <input type="text" v-on:keyup.enter="logText"> // 사용자가 엔터버튼을 누르면
+    <button>add</button>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        logText: function() {
+          console.log('clicked');
+        }
+      }
+    })
+  </script>
+  
+  
+keyup. 뒤에 있는 것을 modify라고 함
+ 
+ 
+
+ 
+
 
