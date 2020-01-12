@@ -15,5 +15,5 @@ toy-project
 | 8 | 20200109 | 컴포넌트 통신방법-응용 | [같은 컴포넌트 레벨간의 통신 방법](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_08.md) | |
 | 9 | 20200110 | 라우터 | [뷰 라우터](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_09.md) |*참고|
 | 10 | 20200111 | 통신 | [http 통신 라이브러리 - axios](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_10.md) |*참고|
-| 11 | 20200112 | 문법 | [템플릿문법 기본](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_11.md) | |
+| 11 | 20200112 | 문법 | [템플릿문법 기본 v-bind, v-if, v-show, keyup](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_11.md) | |
 | 12 | 20200112 | 문법 | [템플릿문법 실전 watch, computed](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_12.md) | |
