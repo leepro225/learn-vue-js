@@ -78,4 +78,10 @@ js 동작원리 : https://joshua1988.github.io/web-development/translation/javas
   
 #### 웹 서비스에서의 클라이언트와 서버와의 HTTP 통신 구조
   
-![06](./img/06.JPG)
+![06](./img/06.JPG)  
+  
+  
+  
+  
+프런트엔드 개발자가 알아야 하는 HTTP 프로토콜 : https://joshua1988.github.io/web-development/http-part1/
+구글 크롬 개발자 도구 공식 문서 : https://developers.google.com/web/tools/chrome-devtools/
