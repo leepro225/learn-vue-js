@@ -15,10 +15,10 @@ https://cli.vuejs.org/
 
 ### 프로젝트 생성하기
 
-      vue create vue-cli /뷰로 만들 폴더 명
+      vue create vue-cli //뷰로 만들 폴더 명
       
  >default 선택
  
-      cd vue-cli /이동해서
-      npm run serve /실행하면됑
+      cd vue-cli //이동해서
+      npm run serve //실행하면됑
 
