@@ -17,3 +17,22 @@
       <AppHeader></AppHeader>
       
 컴포넌트명은 두 단어 이상조합, 파스칼 케이스로 권장한다. 이렇게 안하면 브라우저가 기존의 html태그와 구분이 어렵다.
+
+
+
+      <template>
+        <div>
+          <app-header></app-header>
+        </div>
+      </template>
+
+      <script>
+      import AppHeader from './components/AppHeader.vue';
+      
+      export default {
+        components: {
+          'app-header': AppHeader
+        }
+      }
+      </script>
+
