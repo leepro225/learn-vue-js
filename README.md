@@ -18,3 +18,4 @@ toy-project
 | 11 | 20200112 | 문법 | [템플릿문법 기본 v-bind, v-if, v-show, keyup](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_11.md) | |
 | 12 | 20200112 | 문법 | [템플릿문법 실전 watch, computed](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_12.md) | |
 | 13 | 20200112 | 뷰 | [CLI](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_13.md) | |
+| 14 | 20200114 | 싱글파일 컴포넌트 | [싱글파일 컴포넌트로 여태까지 배운 것 적용하기](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_14.md) | |
