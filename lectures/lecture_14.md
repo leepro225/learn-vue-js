@@ -1,24 +1,19 @@
-# 프로젝트 생성 도구 - Vue CLI
+# 싱글파일 컴포넌트
 
-### 공식 사이트 링크
-https://cli.vuejs.org/
+### data
 
-      node -v  // node 버전 확인 10점대
-      npm -v   // npm 버전 확인 6점대
-      npm install -g @vue/cli   //CLI 설치
-      sudo npm install -g @vue/cli   // permision error가 뜨는 경우
-
-
-### npm이 package install 하는 곳
-/nodemodules
-
-
-### 프로젝트 생성하기
-
-      vue create vue-cli //뷰로 만들 폴더 명
+      <script>
+      export default {
+        data: function() {
+                  return { // 꼭 데이터라는 function의 return값으로 사용해야한다.
+                  }        // data : {}이러케 해버리면 다른 컴포넌트들에서도 참고가 가능해져 에러가 발생하기 때문
+            }
+      }
+      </script>
       
- >default 선택
- 
-      cd vue-cli //이동해서
-      npm run serve //실행하면됑
+      
+### 컴포넌트 등록하기
 
+      <AppHeader></AppHeader>
+      
+컴포넌트명은 두 단어 이상조합, 파스칼 케이스로 권장한다. 이렇게 안하면 브라우저가 기존의 html태그와 구분이 어렵다.
