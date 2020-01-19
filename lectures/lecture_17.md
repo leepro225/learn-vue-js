@@ -1,59 +1,50 @@
-# 싱글파일 컴포넌트
+# form 태그로 데이터 보내기
 
-### emit로 데이터 보내기
-
-#### 자식 컴포넌트
-
-      <template>
-        <header>
-          <h1>{{ propsdata }}</h1>
-          <button v-on:click="sendEvent">send</button>
-        </header>
+      <template>1
+        <form v-on:submit.prevent="submitForm"> // event modifyer? .prevent 이벤트의 기본 동작을 막겟다!
+          <div>
+            <label for="username">id: </label>
+            <input id="username" type="text" v-model="username"> // 양방향 데이터 바인딩, data의 username이랑 연결됨
+          </div>
+          <div>
+            <label for="password">pw: </label>
+            <input id="password" type="password" v-model="password">
+          </div>
+          <button type="submit">login</button>
+        </form>
       </template>
 
       <script>
-      export default {
-        props: ['propsdata'],
-        methods: {
-          sendEvent: function() {
-            this.$emit('renew'); // renew 상위로 보낼 이벤트의 이름
-          }
-        }
-      }
-      </script>
-
- 
- #### 부모 컴포넌트
- 
-      <template>
-        <div>
-          <app-header 
-            v-bind:propsdata="str"
-            v-on:renew="renewStr"></app-header> // v-on:하위에서 받은 emit의 이름="상위의 메소드 명"
-        </div>
-      </template>
-
-      <script>
-      import AppHeader from './components/AppHeader.vue';
-
+      import axios from 'axios';
       export default {
         data: function() {
           return {
-            str: 'Header'
+            username: '',
+            password: '',
           }
         },
-        components: {
-          'app-header': AppHeader
-        },
         methods: {
-          renewStr: function() {    // renew를 받아 renewStr을 실행하겠쥬
-            this.str = 'hi';        // 이게 실행되면 propsdata로 하위로 데이터를 보낼테니 화면에서 값이 바뀐다~
+          submitForm: function() {
+            // event.preventDefault(); -> form태그 특성상 새로고침되는 것을 막아주는 거
+            console.log(this.username, this.password);
+            var url = 'https://jsonplaceholder.typicode.com/users';
+            var data = {
+              username: this.username,
+              password: this.password
+            }
+            axios.post(url, data)
+              .then(function(response) {
+                console.log(response);
+              })
+              .catch(function(error) {
+                console.log(error);
+              });
           }
         }
       }
       </script>
-
-
       
-
-
+      
+      
+      
+  이벤트 버블링 참고 : https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/
