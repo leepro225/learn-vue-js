@@ -21,4 +21,4 @@ toy-project
 | 14 | 20200114 | 싱글파일 컴포넌트 | [싱글파일 컴포넌트로 여태까지 배운 것 적용하기](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_14.md) | |
 15 | 20200119 | 싱글파일 컴포넌트 | [props 부모가 자식에게](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_15.md) | |
 16 | 20200119 | 싱글파일 컴포넌트 | [emit 자식이 부모에게](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_16.md) | |
-17 | 20200119 | 최종프로젝트 | [emit 자식이 부모에게](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_17.md) | |
+17 | 20200119 | 최종프로젝트 | [form 태그로 데이터 보내기](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_17.md) |*참고|
