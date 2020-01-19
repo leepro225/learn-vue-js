@@ -1,38 +1,48 @@
 # 싱글파일 컴포넌트
 
-### data
+### props로 데이터 내리기
 
-      <script>
-      export default {
-        data: function() {
-                  return { // 꼭 데이터라는 function의 return값으로 사용해야한다.
-                  }        // data : {}이러케 해버리면 다른 컴포넌트들에서도 참고가 가능해져 에러가 발생하기 때문
-            }
-      }
-      </script>
-      
-      
-### 컴포넌트 등록하기
-
-      <AppHeader></AppHeader>
-      
-컴포넌트명은 두 단어 이상조합, 파스칼 케이스로 권장한다. 이렇게 안하면 브라우저가 기존의 html태그와 구분이 어렵다.
-
-
+#### 부모 컴포넌트
 
       <template>
-        <div>
-          <app-header></app-header>
+      <div>
+          <!-- <app-header v-bind:프롭스 속성 이름="아래로 내릴 상위 컴포넌트의 데이터 이름"></app-header> -->
+          <app-header v-bind:propsdata="str"></app-header>
         </div>
       </template>
 
       <script>
       import AppHeader from './components/AppHeader.vue';
-      
+
       export default {
+        data: function() {
+          return {
+            str: 'Header'
+          }
+        },
         components: {
           'app-header': AppHeader
         }
       }
       </script>
+
+ 오른쪽이 현재 파일의 데이터, 왼쪽이 하위로 내렸을 때 프롭스 이름
+ 
+ #### 자식 컴포넌트
+ 
+      <template>
+        <header>
+          <h1>{{ propsdata }}</h1>
+        </header>
+      </template>
+
+      <script>
+      export default {
+        props: ['propsdata'],
+      }
+      </script>
+
+프롭스 속성을 배열로 받아 사용하면 됨!!!
+      
+
 
