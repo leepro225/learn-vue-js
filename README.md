@@ -20,3 +20,4 @@ toy-project
 | 13 | 20200112 | 뷰 | [CLI](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_13.md) | |
 | 14 | 20200114 | 싱글파일 컴포넌트 | [싱글파일 컴포넌트로 여태까지 배운 것 적용하기](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_14.md) | |
 15 | 20200119 | 싱글파일 컴포넌트 | [props](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_15.md) | |
+16 | 20200119 | 싱글파일 컴포넌트 | [props](https://github.com/leepro225/learn-vue-js/blob/master/lectures/lecture_16.md) | |
