@@ -1,13 +1,35 @@
 # 싱글파일 컴포넌트
 
-### props로 데이터 내리기
+### emit로 데이터 보내기
 
-#### 부모 컴포넌트
+#### 자식 컴포넌트
 
       <template>
-      <div>
-          <!-- <app-header v-bind:프롭스 속성 이름="아래로 내릴 상위 컴포넌트의 데이터 이름"></app-header> -->
-          <app-header v-bind:propsdata="str"></app-header>
+        <header>
+          <h1>{{ propsdata }}</h1>
+          <button v-on:click="sendEvent">send</button>
+        </header>
+      </template>
+
+      <script>
+      export default {
+        props: ['propsdata'],
+        methods: {
+          sendEvent: function() {
+            this.$emit('renew'); // renew 상위로 보낼 이벤트의 이름
+          }
+        }
+      }
+      </script>
+
+ 
+ #### 부모 컴포넌트
+ 
+      <template>
+        <div>
+          <app-header 
+            v-bind:propsdata="str"
+            v-on:renew="renewStr"></app-header> // v-on:하위에서 받은 emit의 이름="상위의 메소드 명"
         </div>
       </template>
 
@@ -22,27 +44,16 @@
         },
         components: {
           'app-header': AppHeader
+        },
+        methods: {
+          renewStr: function() {    // renew를 받아 renewStr을 실행하겠쥬
+            this.str = 'hi';        // 이게 실행되면 propsdata로 하위로 데이터를 보낼테니 화면에서 값이 바뀐다~
+          }
         }
       }
       </script>
 
- 오른쪽이 현재 파일의 데이터, 왼쪽이 하위로 내렸을 때 프롭스 이름
- 
- #### 자식 컴포넌트
- 
-      <template>
-        <header>
-          <h1>{{ propsdata }}</h1>
-        </header>
-      </template>
 
-      <script>
-      export default {
-        props: ['propsdata'],
-      }
-      </script>
-
-프롭스 속성을 배열로 받아 사용하면 됨!!!
       
 
 
