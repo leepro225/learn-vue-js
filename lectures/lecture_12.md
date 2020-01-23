@@ -75,28 +75,28 @@ function의 인자값으로 (새로운값, 기존값)을 받을 수 있음. 받�
 
 ### computed를 이용한 클래스 바인딩 방법 
 
-  <style>
-     .warning {
-        color: red;
-     }
-  </style>
-  <div id="app">
-    <p v-bind:class="{ warning : isError }">Hello</p> // ture면 warging이라는 class를 넣는다.
-    <p v-bind:class="errorTextColor">Hello</p> // computed 속성을 이용하기
-  </div>
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        isError: false
-      },
-      computed: {
-        errorTextColor: function() {
-          return this.isError ? 'warning' : null;
-        }
-      }
-    });
-  </script>
+        <style>
+           .warning {
+              color: red;
+           }
+        </style>
+        <div id="app">
+          <p v-bind:class="{ warning : isError }">Hello</p> // ture면 warging이라는 class를 넣는다.
+          <p v-bind:class="errorTextColor">Hello</p> // computed 속성을 이용하기
+        </div>
+        <script>
+          new Vue({
+            el: '#app',
+            data: {
+              isError: false
+            },
+            computed: {
+              errorTextColor: function() {
+                return this.isError ? 'warning' : null;
+              }
+            }
+          });
+        </script>
 
 
 
