@@ -12,7 +12,6 @@ jobs:
     needs: job1
     runs-on: ubuntu-latest
     strategy:
-      matrix: 
-        test: ${{ toJSON(needs.job1.outputs.matrix.include) }}
+      matrix: ${{ toJSON(needs.job1.outputs.matrix) }}
     steps:
       - run: echo "하잉 몇번?"
