@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix: 
-        test: ${{ fromJSON(needs.job1.outputs.matrix) }}
+        test: ${{ needs.job1.outputs.matrix }}
     steps:
       - run: echo "하잉 몇번?"
