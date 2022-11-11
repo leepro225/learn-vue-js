@@ -9,7 +9,6 @@ jobs:
       - id: set-matrix
         run: |
           echo "matrix={\"test\":[\"app-americano\", \"app-latte\"]}" >> $GITHUB_OUTPUT
-          pwd
           ls
   job2:
     needs: job1
