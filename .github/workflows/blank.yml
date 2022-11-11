@@ -7,7 +7,10 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - id: set-matrix
-        run: echo "matrix={\"test\":[\"app-americano\", \"app-latte\"]}" >> $GITHUB_OUTPUT
+        run: |
+          echo "matrix={\"test\":[\"app-americano\", \"app-latte\"]}" >> $GITHUB_OUTPUT
+          pwd
+          ls
   job2:
     needs: job1
     runs-on: ubuntu-latest
