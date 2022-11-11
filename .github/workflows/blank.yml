@@ -9,8 +9,7 @@ jobs:
       - id: set-matrix
         run: |
           echo "matrix={\"test\":[\"app-americano\", \"app-latte\"]}" >> $GITHUB_OUTPUT
-      - run: pwd
-      - run: ls /home/runner/work/learn-vue-js/learn-vue-js
+      - run: pwd; ls -l
   job2:
     needs: job1
     runs-on: ubuntu-latest
