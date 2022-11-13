@@ -12,7 +12,7 @@ jobs:
       - run: pwd; ls -l
       - run: |
           STR=ABC123abc123ABC
-          echo ${STR#A*1} 
+          echo ${STR#123} 
   job2:
     needs: job1
     runs-on: ubuntu-latest
