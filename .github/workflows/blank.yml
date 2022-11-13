@@ -10,6 +10,9 @@ jobs:
         run: |
           echo "matrix={\"test\":[\"app-americano\", \"app-latte\"]}" >> $GITHUB_OUTPUT
       - run: pwd; ls -l
+      - run: |
+          STR=ABC123abc123ABC
+          echo ${STR#A*1} 
   job2:
     needs: job1
     runs-on: ubuntu-latest
